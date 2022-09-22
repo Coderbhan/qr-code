@@ -1,0 +1,219 @@
+
+
+/*https://piccalil.li/blog/a-modern-css-reset
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+:root{
+    --White-color: hsl(0, 0%, 100%);
+--Light-gray: hsl(212, 45%, 89%);
+--Grayish-blue: hsl(220, 15%, 55%);
+ --Dark-blue: hsl(218, 44%, 22%);
+}
+
+.dark{
+  --White-color: hsl(193, 93%, 6%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(210, 96%, 11%);
+   --Dark-blue: hsl(217, 100%, 93%);
+}
+
+
+
+
+
+body{
+    background-color: var(--Grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    width: max(300px,90%);
+    transition: 0.2s linear;
+    
+    background-color: var(--White-color);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.txt{
+    margin: 1.5em 1.2em;
+}
+
+.img{
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.head{
+    text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: .8rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--Dark-blue);
+}
+
+.dis{
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.2;
+    width: 100%;
+    color: grey;
+}
+@media (min-width: 376px){
+    .container{
+        width: max(150px,270px);
+       
+    }
+
+    .txt{
+        margin: 1.5em 0.5em;
+    }
+
+    .head{
+        text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: .8rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--Dark-blue);
+    }
+
+    
+}
+
+.btn{
+  
+  margin: 2rem;
+  
+
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+
+}
+
+*{
+  box-sizing: border-box;
+}
+.fa-moon{
+  color: #f1c40f;
+}
+.fa-sun{
+  color: #f39c12;
+}
+
+.checkbox{
+  opacity: 0;
+ position: absolute;
+}
+
+
+.label{
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 27px;
+  width: 65px;
+  display: flex;
+  background-color: #111;
+  padding: 5px;
+  position: relative;
+  border-radius: 50px;
+}
+
+.ball{
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+  transform: translateX(38px);
+}
